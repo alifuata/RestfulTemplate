@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AfaRestApi</name>
+    </assembly>
+    <members>
+        <member name="T:AfaRestApi.Controllers.UserController">
+            <summary>
+            Controller for the user
+            </summary>
+        </member>
+        <member name="M:AfaRestApi.Controllers.UserController.Get">
+            <summary>
+            Returns all Users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AfaRestApi.Controllers.UserController.Get(System.Int32)">
+            <summary>
+            Returns the user with the given ID
+            </summary>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AfaRestApi.Controllers.UserController.Post(AfaRestApi.Models.User)">
+            <summary>
+            Inserts and returns the added user
+            </summary>
+            <param name="user">a user with name and phone should be added</param>
+            <returns></returns>
+        </member>
+        <member name="M:AfaRestApi.Controllers.UserController.Put(AfaRestApi.Models.User)">
+            <summary>
+            Updates and returns the given user
+            </summary>
+            <param name="user">A user to </param>
+            <returns></returns>
+        </member>
+        <member name="M:AfaRestApi.Controllers.UserController.Delete(System.Int32)">
+            <summary>
+            Deletes the user with given ID
+            </summary>
+            <param name="UserId"></param>
+            <returns>True if succeeded</returns>
+        </member>
+        <member name="T:AfaRestApi.Data.FakeData">
+            <summary>
+            Temporary List of Users
+            </summary>
+        </member>
+        <member name="M:AfaRestApi.Data.FakeData.GetUsers">
+            <summary>
+            Returns all users in IList
+            </summary>
+            <returns>List of users</returns>
+        </member>
+        <member name="M:AfaRestApi.Data.FakeData.InsertUser(AfaRestApi.Models.User)">
+            <summary>
+            Adds a new user in to List
+            </summary>
+            <param name="user"></param>
+            <returns>Returns true if succeeded false otherwise</returns>
+        </member>
+        <member name="M:AfaRestApi.Data.FakeData.DeleteUser(AfaRestApi.Models.User)">
+            <summary>
+             Removes a new user from List
+            </summary>
+            <param name="user"></param>
+            <returns>Returns true if succeeded false otherwise</returns>
+        </member>
+        <member name="T:AfaRestApi.Models.User">
+            <summary>
+            A user class
+            </summary>
+        </member>
+        <member name="P:AfaRestApi.Models.User.ID">
+            <summary>
+            Unique ID of the record
+            </summary>
+        </member>
+        <member name="P:AfaRestApi.Models.User.NAME">
+            <summary>
+            Name of the user
+            </summary>
+        </member>
+        <member name="P:AfaRestApi.Models.User.PHONE">
+            <summary>
+            Phone number of the user
+            </summary>
+        </member>
+        <member name="T:AfaRestApi.Program">
+            <summary>
+            Call me :)
+            </summary>
+        </member>
+        <member name="M:AfaRestApi.Program.Main(System.String[])">
+            <summary>
+            Come to me
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:AfaRestApi.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Do I have to do everything ?
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
