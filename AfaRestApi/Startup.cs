@@ -25,8 +25,22 @@ namespace AfaRestApi
         {
             //ihtiyaç olan servisleri buradan ekle
             services.AddControllers();
-            services.AddSwaggerDocument();
-            
+            services.AddSwaggerDocument(config =>
+            {
+                config.PostProcess = (doc =>
+                {
+                    doc.Info.Title = "Minimum Api";
+                    doc.Info.Version = "1.0.0";
+                    doc.Info.Contact = new NSwag.OpenApiContact()
+                    {
+                        Name = "Ali Fuat",
+                        Email = "alifuata@gmail.com",
+                        Url = "https://www.linkedin.com/in/ali-fuat/"
+                    };
+
+                });
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,7 +62,7 @@ namespace AfaRestApi
             app.UseSwaggerUi3();
             app.UseEndpoints(endpoints =>
             {
-                
+
                 endpoints.MapControllers();
                 //endpoints.MapGet("/", async context =>
                 //{

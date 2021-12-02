@@ -4,6 +4,31 @@
         <name>AfaRestApi</name>
     </assembly>
     <members>
+        <member name="T:AfaRestApi.Controllers.CarController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AfaRestApi.Controllers.CarController.Get">
+            <summary>
+            Get All cars in the DB
+            </summary>
+            <returns>AR with Data</returns>
+        </member>
+        <member name="M:AfaRestApi.Controllers.CarController.Get(System.Int32)">
+            <summary>
+            Get Spesific Car
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AfaRestApi.Controllers.CarController.Post(AfaRestApi.Models.Car)">
+            <summary>
+            Add new car 
+            </summary>
+            <param name="car"></param>
+            <returns>Car with ID</returns>
+        </member>
         <member name="T:AfaRestApi.Controllers.UserController">
             <summary>
             Controller for the user
@@ -68,6 +93,61 @@
             <param name="user"></param>
             <returns>Returns true if succeeded false otherwise</returns>
         </member>
+        <member name="T:AfaRestApi.Data.FakeDataCars">
+            <summary>
+            Data for car controllers
+            </summary>
+        </member>
+        <member name="M:AfaRestApi.Data.FakeDataCars.GetAllCars">
+            <summary>
+            Get All Cars
+            </summary>
+            <returns>List of All Cars</returns>
+        </member>
+        <member name="M:AfaRestApi.Data.FakeDataCars.GetCar(System.Int32)">
+            <summary>
+            Get spesific car From DB
+            </summary>
+            <param name="id">DB ID of Car</param>
+            <returns>Car</returns>
+        </member>
+        <member name="M:AfaRestApi.Data.FakeDataCars.InsertCar(AfaRestApi.Models.Car)">
+            <summary>
+            inserts car 
+            </summary>
+            <param name="car"></param>
+            <returns>Inserted car</returns>
+        </member>
+        <member name="T:AfaRestApi.Models.Car">
+            <summary>
+            Car Object
+            </summary>
+        </member>
+        <member name="P:AfaRestApi.Models.Car.ID">
+            <summary>
+            DB Unique ID
+            </summary>
+        </member>
+        <member name="P:AfaRestApi.Models.Car.Year">
+            <summary>
+            Year of the car
+            </summary>
+        </member>
+        <member name="P:AfaRestApi.Models.Car.Make">
+            <summary>
+            Brand of the car
+            </summary>
+        </member>
+        <member name="P:AfaRestApi.Models.Car.Model">
+            <summary>
+            Model of the car
+            </summary>
+        </member>
+        <member name="P:AfaRestApi.Models.Car.Price">
+            <summary>
+            Money to be paid for the car
+            </summary>
+        </member>
         <member name="T:AfaRestApi.Models.User">
             <summary>
             A user class
@@ -105,6 +185,24 @@
             </summary>
             <param name="args"></param>
             <returns></returns>
+        </member>
+        <member name="T:AfaRestApi.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AfaRestApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:AfaRestApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
         </member>
     </members>
 </doc>
