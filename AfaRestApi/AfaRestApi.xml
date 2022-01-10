@@ -29,6 +29,18 @@
             <param name="car"></param>
             <returns>Car with ID</returns>
         </member>
+        <member name="T:AfaRestApi.Controllers.RehberController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AfaRestApi.Controllers.RehberController.Post(AfaRestApi.Models.Rehber)">
+            <summary>
+            Inserts and returns the added user
+            </summary>
+            <param name="rehber">a user with name and phone should be added</param>
+            <returns></returns>
+        </member>
         <member name="T:AfaRestApi.Controllers.UserController">
             <summary>
             Controller for the user
@@ -118,6 +130,17 @@
             <param name="car"></param>
             <returns>Inserted car</returns>
         </member>
+        <member name="T:AfaRestApi.Data.RehberData">
+            <summary>
+            Rehber işlemleri için oluşturuldu
+            </summary>
+        </member>
+        <member name="M:AfaRestApi.Data.RehberData.RehberKaydet(AfaRestApi.Models.Rehber)">
+            <summary>
+            
+            </summary>
+            <param name="rehber"></param>
+        </member>
         <member name="T:AfaRestApi.Models.Car">
             <summary>
             Car Object
@@ -146,6 +169,44 @@
         <member name="P:AfaRestApi.Models.Car.Price">
             <summary>
             Money to be paid for the car
+            </summary>
+        </member>
+        <member name="T:AfaRestApi.Models.Rehber">
+            <summary>
+            Rehber sınıfı, MSSQL Testi için
+            </summary>
+        </member>
+        <member name="P:AfaRestApi.Models.Rehber.id">
+            <summary>
+            Veritabanı kayıt ID
+            </summary>
+        </member>
+        <member name="P:AfaRestApi.Models.Rehber.name">
+            <summary>
+            adı soyadı
+            </summary>
+        </member>
+        <member name="P:AfaRestApi.Models.Rehber.phone">
+            <summary>
+            telefon numarası
+            </summary>
+        </member>
+        <member name="P:AfaRestApi.Models.Rehber.email">
+            <summary>
+            email
+            </summary>
+        </member>
+        <member name="M:AfaRestApi.Models.Rehber.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Yapıcı method :)
+            </summary>
+            <param name="name"></param>
+            <param name="phone"></param>
+            <param name="email"></param>
+        </member>
+        <member name="M:AfaRestApi.Models.Rehber.#ctor">
+            <summary>
+            Boş Yapıcı
             </summary>
         </member>
         <member name="T:AfaRestApi.Models.User">

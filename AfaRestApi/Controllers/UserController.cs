@@ -81,3 +81,37 @@ namespace AfaRestApi.Controllers
         }
     }
 }
+/*
+
+2 tane tek parametreli get metodu varsa metodlar aşağıdaki gibi routlanabilir
+[HttpGet]
+[Route("action/{Id}")]
+public User GetUserById(int Id)
+{
+    FakeData fd = new FakeData();
+    var user = fd.GetUsers().FirstOrDefault(x => x.ID == UserId);
+    return user;
+}
+
+birden çok parametrede
+
+[HttpGet]
+[Route("action/{Id}/{name}")]
+public User GetUserByIdAndName(int Id, string name)
+{
+    FakeData fd = new FakeData();
+    var user = fd.GetUsers().FirstOrDefault(x => x.ID == UserId);
+    return user;
+}
+
+veya query string ile
+api/GetUserByIdAndName?Id=3&name=ali fuat
+[HttpGet]
+[Route("[action]")]
+public User GetUserByIdAndName(int Id, string name)
+{
+    FakeData fd = new FakeData();
+    var user = fd.GetUsers().FirstOrDefault(x => x.ID == UserId);
+    return user;
+}
+*/
